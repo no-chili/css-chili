@@ -1,0 +1,104 @@
+body {
+    background: url(../images/2.jpg);
+}
+
+.container {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+    object-fit: cover;
+    perspective: 1000px;
+    height: 100vh;
+}
+
+.card {
+    position: relative;
+    padding: 5px;
+    width: 200px;
+    height: 300px;
+    margin: 15px;
+    background-color: transparent;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-radius: 5px;
+    box-shadow: 15px 15px 15px #000;
+    backdrop-filter: blur(5px);
+    overflow: hidden;
+    transition: all 0.5s;
+    animation: frams 3s ease-out infinite;
+}
+
+.card:hover {
+    animation-play-state: paused;
+    transform: rotateX(0deg) rotateY(0deg);
+}
+
+.card:hover .content {
+    padding-top: 5px;
+}
+
+.card:hover .title {
+    padding-top: 40px;
+}
+
+.title {
+    padding-top: 120px;
+    font-size: 30px;
+    font-weight: 800;
+    color: #fff;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.id {
+    position: absolute;
+    top: 0;
+    right: 50px;
+    font-size: 50px;
+    font-weight: 800;
+    color: rgba(256, 256, 256, 0.2);
+}
+
+.content {
+    color: #ddd;
+    padding: 5px;
+    padding-top: 300px;
+    transition: all 0.5s;
+}
+
+.delay_5 {
+    animation-delay: .5s;
+}
+
+.delay_4 {
+    animation-delay: .4s;
+}
+
+.delay_3 {
+    animation-delay: .3s;
+}
+
+.delay_2 {
+    animation-delay: .2s;
+}
+
+@keyframes frams {
+    0% {
+        transform: rotateX(5deg) rotateY(5deg);
+    }
+    25% {
+        transform: rotateX(5deg) rotateY(-5deg);
+    }
+    50% {
+        transform: rotateX(-5deg) rotateY(-5deg);
+    }
+    75% {
+        transform: rotateX(-5deg) rotateY(5deg);
+    }
+    100% {
+        transform: rotateX(5deg) rotateY(5deg);
+    }
+}
