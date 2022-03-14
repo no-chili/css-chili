@@ -12,19 +12,21 @@ window.onload = () => {
         } else {
             id = setTimeout(() => {
                 id = null
-            }, 500)
-            aftertop = document.scrollingElement.scrollTop;
-            console.log(beforetop, aftertop);
-            if (aftertop - beforetop > 5) {
-                //向下滚动
-                window.scrollTo(0, beforetop + height);
-                beforetop = beforetop + height;
-            } else if (aftertop - beforetop < 5) {
-                //向上滚动
-                window.scrollTo(0, beforetop - height);
-                beforetop = beforetop - height;
-            } else {
-
+            }, 1000)
+            aftertop=window.scrollY
+            console.log(beforetop,aftertop);
+            if(aftertop>beforetop){
+                window.scrollTo({
+                    top:1000,
+                    behavior: 'smooth'
+                })
+                beforetop=1000
+            }else{
+                window.scrollTo({
+                    top:0,
+                    behavior: 'smooth'
+                })
+                beforetop=0
             }
         }
 
