@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css三角</title>
+    <link rel="stylesheet" href="../common.css">
+    <link rel="stylesheet" href="./index.css">
+    <script src="./index.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <ul>
+            <li> 设置四条边效果
+                <div class="triangle_1"></div>
+            </li>
+            <li> 给border-top设为了transparent
+                <div class="triangle_2"></div>
+            </li>
+            <li>三条边设置为了transparent
+                <div class="triangle_3"></div>
+            </li>
+            <li>只剩两条边有宽度，一条边有颜色
+                <div class="triangle"></div>
+                注意：至少保留两条边宽有宽度
+            </li>
+        </ul>
+    </div>
+    <div class="knowledge">
+        <div class="point">绘制css三角的关键是设置高宽为0</div>
+        <div class="point">然后用边框填充内容，border-top:60px solid #456</div>
+        <div class="point">设置某条边框颜色为透明transparent就实现隐藏</div>
+        <div class="point">隐藏三条边后剩下的就是三角了</div>
+        <div class="point">注意：至少设置两条边框的宽度</div>
+    </div>
+</body>
+
+</html>

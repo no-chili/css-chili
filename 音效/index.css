@@ -1,0 +1,15 @@
+.controls {
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: bisque;
+    transition: all 0.5s;
+}
+
+.controls:hover {
+    background-color: rgb(235, 207, 173);
+}
